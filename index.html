@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyDigitalQR — Dynamic QR Codes for Business | Menus, Cards, Payments & More</title>
+<meta name="description" content="Create dynamic QR codes for restaurants, retail, business cards, payments & packaging. Track scans in real-time, edit destinations anytime. Plans from ₹499/mo. Chat on WhatsApp to get started.">
+<meta name="keywords" content="QR code generator, dynamic QR code, QR menu, business QR code, QR payments India, MyDigitalQR">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mydigitalqr.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="MyDigitalQR — Dynamic QR Codes for Business">
+<meta property="og:description" content="Smart, trackable QR codes for menus, cards, payments & packaging. Built for businesses that want results, not just codes.">
+<meta property="og:url" content="https://mydigitalqr.com/">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MyDigitalQR — Dynamic QR Codes for Business">
+<meta name="twitter:description" content="Smart, trackable QR codes for menus, cards, payments & packaging.">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MyDigitalQR",
+  "url": "https://mydigitalqr.com",
+  "email": "svssocials.info@gmail.com",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-8248176509",
+    "contactType": "customer service",
+    "areaServed": "IN"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is a dynamic QR code and how is it different from a normal QR code?","acceptedAnswer":{"@type":"Answer","text":"A normal QR code is printed once and points to one fixed link forever. A dynamic QR code from MyDigitalQR lets you change where it points — anytime, without reprinting — and shows you real-time scan analytics like location, device, and time."}},
+    {"@type":"Question","name":"Do I need to print a new QR code every time I update my menu or offer?","acceptedAnswer":{"@type":"Answer","text":"No. That's the core benefit of dynamic QR codes. You update the destination link from your dashboard and the same printed code instantly reflects the change."}},
+    {"@type":"Question","name":"Can I track how many people scan my QR code?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every paid plan includes a scan analytics dashboard showing total scans, scan location, device type, and time of day."}},
+    {"@type":"Question","name":"Will the QR code expire or stop working?","acceptedAnswer":{"@type":"Answer","text":"As long as your plan is active, your QR codes keep working. We also offer a Lifetime plan for codes that never need renewal."}},
+    {"@type":"Question","name":"Can I customize the QR code design with my logo and brand colors?","acceptedAnswer":{"@type":"Answer","text":"Yes, all plans except the free trial include custom colors, logo embedding, and frame styles to match your brand."}},
+    {"@type":"Question","name":"How do I order or get help — is there support on WhatsApp?","acceptedAnswer":{"@type":"Answer","text":"Yes. Tap any 'Order on WhatsApp' button on this site to chat with our team directly at +91 82481 76509, or email svssocials.info@gmail.com."}}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#0B1120;
+  --surface:#1A2332;
+  --surface-2:#212C40;
+  --teal:#0EA5A8;
+  --teal-light:#5FE0D6;
+  --amber:#FFB020;
+  --paper:#F5F7FA;
+  --paper-2:#ffffff;
+  --text-dim:#9AA7BD;
+  --line:rgba(255,255,255,0.08);
+  --line-dark:rgba(11,17,32,0.1);
+  --radius:14px;
+  --max:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--paper);
+  color:#1B2333;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.01em;}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--teal);
+}
+.eyebrow::before{content:"";width:14px;height:14px;background:
+  linear-gradient(var(--teal) 0 0) 0 0/4px 4px,
+  linear-gradient(var(--teal) 0 0) 10px 0/4px 4px,
+  linear-gradient(var(--teal) 0 0) 0 10px/4px 4px;
+  background-repeat:no-repeat;flex-shrink:0;}
+section{padding:88px 0;}
+@media (max-width:768px){section{padding:56px 0;}}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-weight:600;font-size:0.95rem;
+  padding:14px 26px;border-radius:10px;
+  cursor:pointer;border:none;transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  white-space:nowrap;
+}
+.btn:active{transform:scale(0.97);}
+.btn-primary{background:var(--teal);color:#06201F;box-shadow:0 6px 20px rgba(14,165,168,0.35);}
+.btn-primary:hover{background:var(--teal-light);box-shadow:0 8px 26px rgba(14,165,168,0.45);}
+.btn-amber{background:var(--amber);color:#241600;box-shadow:0 6px 20px rgba(255,176,32,0.35);}
+.btn-amber:hover{box-shadow:0 8px 26px rgba(255,176,32,0.5);}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid var(--line);}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal-light);}
+.btn-dark{background:var(--ink);color:#fff;}
+.btn-dark:hover{background:#000;}
+.btn-block{width:100%;}
+.btn svg{flex-shrink:0;}
+
+/* ---------- Nav ---------- */
+header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(11,17,32,0.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--max);margin:0 auto;}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;color:#fff;}
+.logo-mark{width:30px;height:30px;flex-shrink:0;}
+.nav-links{display:flex;gap:32px;align-items:center;}
+.nav-links a{color:var(--text-dim);font-size:0.92rem;font-weight:500;transition:color .15s;}
+.nav-links a:hover{color:#fff;}
+.nav-cta{display:flex;gap:12px;align-items:center;}
+.nav-cta .btn{padding:11px 20px;font-size:0.88rem;}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.hamburger span{width:24px;height:2px;background:#fff;border-radius:2px;}
+.mobile-menu{display:none;flex-direction:column;gap:18px;padding:24px;background:var(--surface);border-top:1px solid var(--line);}
+.mobile-menu a{color:#fff;font-weight:500;font-size:1rem;}
+.mobile-menu.open{display:flex;}
+@media (max-width:860px){
+  .nav-links,.nav-cta{display:none;}
+  .hamburger{display:flex;}
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:radial-gradient(ellipse 900px 500px at 80% -10%, rgba(14,165,168,0.25), transparent),var(--ink);
+  color:#fff;padding:90px 0 80px;position:relative;overflow:hidden;
+}
+.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+.hero h1{font-size:clamp(2.1rem,4.5vw,3.4rem);font-weight:700;line-height:1.08;margin:18px 0 20px;}
+.hero h1 span{color:var(--teal-light);}
+.hero p.lead{font-size:1.1rem;color:var(--text-dim);max-width:520px;margin-bottom:32px;}
+.hero-cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;}
+.hero-stats{display:flex;gap:36px;flex-wrap:wrap;}
+.hero-stats div b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.6rem;color:#fff;}
+.hero-stats div span{font-size:0.82rem;color:var(--text-dim);}
+
+/* Animated QR assembly graphic */
+.qr-stage{
+  position:relative;aspect-ratio:1/1;max-width:420px;margin:0 auto;
+  background:var(--surface);border:1px solid var(--line);border-radius:20px;
+  padding:36px;
+}
+.qr-grid{width:100%;height:100%;display:grid;grid-template-columns:repeat(9,1fr);grid-template-rows:repeat(9,1fr);gap:4px;}
+.qr-cell{background:#fff;border-radius:2px;opacity:0;transform:scale(0.5);animation:popIn 0.4s ease forwards;}
+.qr-cell.off{background:transparent;}
+@keyframes popIn{to{opacity:1;transform:scale(1);}}
+@media (prefers-reduced-motion: reduce){.qr-cell{animation:none;opacity:1;transform:scale(1);}}
+.qr-caption{text-align:center;margin-top:16px;font-size:0.8rem;color:var(--text-dim);}
+
+/* ---------- Logos / trust strip ---------- */
+.trust-strip{background:var(--paper-2);padding:28px 0;border-bottom:1px solid var(--line-dark);}
+.trust-strip .wrap{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;color:#8A93A6;font-size:0.85rem;font-weight:600;letter-spacing:0.03em;}
+
+/* ---------- Section headers ---------- */
+.sec-head{max-width:680px;margin-bottom:48px;}
+.sec-head h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:700;margin:14px 0 12px;color:var(--ink);}
+.sec-head p{color:#5B6478;font-size:1.05rem;}
+.on-dark .sec-head h2{color:#fff;}
+.on-dark .sec-head p{color:var(--text-dim);}
+
+/* ---------- Features ---------- */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+@media (max-width:900px){.feat-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:600px){.feat-grid{grid-template-columns:1fr;}}
+.feat-card{
+  background:#fff;border:1px solid var(--line-dark);border-radius:var(--radius);
+  padding:28px;transition:transform .2s,box-shadow .2s;
+}
+.feat-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(11,17,32,0.08);}
+.feat-icon{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--teal),#0a7d80);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+.feat-card h3{font-size:1.1rem;margin-bottom:8px;color:var(--ink);}
+.feat-card p{color:#5B6478;font-size:0.92rem;}
+
+/* ---------- Solutions ---------- */
+.sol-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+@media (max-width:980px){.sol-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.sol-grid{grid-template-columns:1fr;}}
+.sol-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;color:#fff;display:flex;flex-direction:column;height:100%;
+}
+.sol-tag{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--teal-light);background:rgba(14,165,168,0.12);padding:4px 10px;border-radius:6px;margin-bottom:14px;width:fit-content;}
+.sol-card h3{font-size:1.15rem;margin-bottom:10px;}
+.sol-card p{color:var(--text-dim);font-size:0.9rem;margin-bottom:18px;flex-grow:1;}
+.sol-card .btn{font-size:0.85rem;padding:10px 16px;}
+
+/* ---------- Pricing ---------- */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch;}
+@media (max-width:900px){.price-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto;}}
+.price-card{
+  background:#fff;border:1px solid var(--line-dark);border-radius:var(--radius);
+  padding:32px 28px;display:flex;flex-direction:column;position:relative;
+}
+.price-card.popular{border:2px solid var(--teal);box-shadow:0 20px 50px rgba(14,165,168,0.18);transform:translateY(-8px);}
+.popular-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--amber);color:#241600;font-size:0.72rem;font-weight:700;padding:5px 14px;border-radius:20px;letter-spacing:0.03em;}
+.price-card h3{font-size:1.2rem;color:var(--ink);margin-bottom:6px;}
+.price-card .desc{color:#5B6478;font-size:0.88rem;margin-bottom:18px;min-height:40px;}
+.price-amt{display:flex;align-items:baseline;gap:6px;margin-bottom:6px;}
+.price-amt .num{font-family:'Space Grotesk',sans-serif;font-size:2.4rem;font-weight:700;color:var(--ink);}
+.price-amt .per{color:#8A93A6;font-size:0.9rem;}
+.price-note{font-size:0.8rem;color:#8A93A6;margin-bottom:24px;}
+.price-feats{list-style:none;margin-bottom:28px;flex-grow:1;}
+.price-feats li{display:flex;gap:10px;font-size:0.9rem;color:#3A4356;margin-bottom:12px;align-items:flex-start;}
+.price-feats li svg{flex-shrink:0;margin-top:2px;}
+
+/* ---------- Testimonials ---------- */
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+@media (max-width:900px){.test-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto;}}
+.test-card{background:#fff;border:1px solid var(--line-dark);border-radius:var(--radius);padding:26px;}
+.stars{color:var(--amber);font-size:0.95rem;margin-bottom:14px;letter-spacing:2px;}
+.test-card p.quote{font-size:0.95rem;color:#3A4356;margin-bottom:20px;}
+.test-author{display:flex;align-items:center;gap:12px;}
+.avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--amber));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:'Space Grotesk',sans-serif;flex-shrink:0;}
+.test-author b{font-size:0.9rem;display:block;color:var(--ink);}
+.test-author span{font-size:0.8rem;color:#8A93A6;}
+
+/* ---------- FAQ ---------- */
+.faq-list{max-width:760px;}
+.faq-item{border-bottom:1px solid var(--line-dark);}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;cursor:pointer;
+  padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1rem;color:var(--ink);
+}
+.faq-q .plus{flex-shrink:0;width:22px;height:22px;position:relative;}
+.faq-q .plus::before,.faq-q .plus::after{content:"";position:absolute;background:var(--teal);border-radius:2px;transition:transform .25s;}
+.faq-q .plus::before{width:14px;height:2px;top:10px;left:4px;}
+.faq-q .plus::after{width:2px;height:14px;top:4px;left:10px;}
+.faq-item.open .plus::after{transform:rotate(90deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.faq-a p{padding-bottom:20px;color:#5B6478;font-size:0.94rem;max-width:680px;}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+.contact-info-card{background:var(--surface);border-radius:var(--radius);padding:32px;color:#fff;}
+.contact-row{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line);}
+.contact-row:last-child{border-bottom:none;}
+.contact-row .ic{width:40px;height:40px;border-radius:10px;background:rgba(14,165,168,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.contact-row b{display:block;font-size:0.95rem;}
+.contact-row span{font-size:0.85rem;color:var(--text-dim);}
+.form-card{background:#fff;border:1px solid var(--line-dark);border-radius:var(--radius);padding:32px;}
+.field{margin-bottom:18px;}
+.field label{display:block;font-size:0.85rem;font-weight:600;color:var(--ink);margin-bottom:6px;}
+.field input,.field select,.field textarea{
+  width:100%;padding:12px 14px;border:1.5px solid #E1E5EB;border-radius:8px;
+  font-family:'Inter',sans-serif;font-size:0.95rem;color:var(--ink);background:#FAFBFC;
+  transition:border-color .15s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--teal);}
+.field textarea{resize:vertical;min-height:90px;}
+.form-row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:480px){.form-row2{grid-template-columns:1fr;}}
+
+/* ---------- Final CTA ---------- */
+.final-cta{background:linear-gradient(135deg,var(--ink),#0a2a2c);color:#fff;text-align:center;padding:80px 0;}
+.final-cta h2{font-size:clamp(1.7rem,3.5vw,2.6rem);margin-bottom:16px;}
+.final-cta p{color:var(--text-dim);max-width:540px;margin:0 auto 32px;font-size:1.05rem;}
+.final-cta .hero-cta-row{justify-content:center;}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:var(--text-dim);padding:48px 0 24px;}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;margin-bottom:32px;}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr 1fr;}}
+.foot-grid h4{color:#fff;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:14px;}
+.foot-grid ul{list-style:none;}
+.foot-grid li{margin-bottom:10px;font-size:0.88rem;}
+.foot-grid a:hover{color:#fff;}
+.foot-bottom{border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:0.82rem;}
+
+/* ---------- WhatsApp floating button ---------- */
+.wa-float{
+  position:fixed;bottom:24px;right:24px;z-index:200;
+  width:60px;height:60px;border-radius:50%;background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 24px rgba(37,211,102,0.5);
+  animation:pulse 2.4s infinite;
+}
+.wa-float:hover{transform:scale(1.08);}
+@keyframes pulse{0%{box-shadow:0 8px 24px rgba(37,211,102,0.5);}50%{box-shadow:0 8px 24px rgba(37,211,102,0.85),0 0 0 8px rgba(37,211,102,0.15);}100%{box-shadow:0 8px 24px rgba(37,211,102,0.5);}}
+@media (prefers-reduced-motion: reduce){.wa-float{animation:none;}}
+
+.visually-hidden{position:absolute;left:-9999px;}
+:focus-visible{outline:2px solid var(--teal-light);outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <nav>
+    <a href="#home" class="logo">
+      <svg class="logo-mark" viewBox="0 0 30 30" fill="none">
+        <rect width="30" height="30" rx="6" fill="#0EA5A8"/>
+        <rect x="6" y="6" width="6" height="6" fill="#06201F"/>
+        <rect x="18" y="6" width="6" height="6" fill="#06201F"/>
+        <rect x="6" y="18" width="6" height="6" fill="#06201F"/>
+        <rect x="18" y="18" width="3" height="3" fill="#06201F"/>
+      </svg>
+      MyDigitalQR
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="https://wa.me/918248176509?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20MyDigitalQR" target="_blank" rel="noopener">WhatsApp Us</a>
+      <a class="btn btn-primary" href="#pricing">Get Started</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#features">Features</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a class="btn btn-primary btn-block" href="https://wa.me/918248176509?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20MyDigitalQR" target="_blank" rel="noopener">Chat on WhatsApp</a>
+  </div>
+</header>
+
+<!-- ================= HERO (Home) ================= -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Dynamic QR Codes, Built for Business</span>
+      <h1>One QR code.<br>Every update, <span>instantly live.</span></h1>
+      <p class="lead">Create QR codes for menus, business cards, payments, and packaging that you can edit anytime — no reprinting, no waste. Track every scan in real time.</p>
+      <div class="hero-cta-row">
+        <a class="btn btn-amber" href="https://wa.me/918248176509?text=Hi%2C%20I%20want%20to%20order%20a%20QR%20code%20product%20from%20MyDigitalQR" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.82.5 3.53 1.36 5L2 22l5.2-1.36C8.65 21.5 10.3 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.5 0-2.93-.4-4.17-1.16l-.3-.18-3.1.81.83-3.02-.2-.31A7.92 7.92 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.42-5.94c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.18-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.01-.37.11-.49.12-.12.27-.31.4-.46.13-.16.18-.27.27-.45.09-.18.05-.33-.02-.45-.07-.12-.6-1.45-.82-1.98-.22-.53-.45-.46-.62-.47-.16-.01-.35-.01-.54-.01-.18 0-.48.07-.74.34-.26.27-.99 1-.99 2.42 0 1.43 1.04 2.81 1.18 3 .14.19 1.96 2.99 4.74 4.07 2.78 1.08 2.78.72 3.28.68.5-.04 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.12-.24-.18-.5-.3z"/></svg>
+          Order on WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#pricing">See Pricing</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>10,000+</b><span>QR codes generated</span></div>
+        <div><b>99.9%</b><span>Uptime on scans</span></div>
+        <div><b>24/7</b><span>WhatsApp support</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="qr-stage">
+        <div class="qr-grid" id="qrGrid"></div>
+        <p class="qr-caption">Every square, editable. Every scan, tracked.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="wrap">
+    <span>RESTAURANTS</span><span>RETAIL STORES</span><span>REAL ESTATE</span><span>EVENTS</span><span>PACKAGING BRANDS</span><span>FREELANCERS</span>
+  </div>
+</div>
+
+<!-- ================= FEATURES ================= -->
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Features</span>
+      <h2>Everything a QR code should do — finally, in one place.</h2>
+      <p>Most QR codes are static and disposable. Ours are a live channel between you and the person who scanned.</p>
+    </div>
+    <div class="feat-grid">
+
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 7V3h4M21 7V3h-4M3 17v4h4M21 17v4h-4"/></svg></div>
+        <h3>Edit anytime, no reprint</h3>
+        <p>Change where your QR code leads — new menu, new offer, new link — without touching the printed code.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 3v18h18M7 14l4-4 3 3 5-6"/></svg></div>
+        <h3>Real-time scan analytics</h3>
+        <p>See total scans, location, device type, and time of day — know exactly who's engaging and when.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+        <h3>Branded design</h3>
+        <p>Add your logo, brand colors, and custom frames so your QR code looks like part of your business, not a sticker.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/></svg></div>
+        <h3>Built to last</h3>
+        <p>High-density error correction means your code scans reliably even on textured packaging or worn signage.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h3>Live in under 2 minutes</h3>
+        <p>Send us your link or files on WhatsApp and get a ready-to-print QR code back the same day.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+        <h3>Secure & private</h3>
+        <p>Your destination links and scan data stay yours — never sold, never shared with third parties.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOLUTIONS ================= -->
+<section id="solutions" style="background:var(--ink);" class="on-dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Solutions</span>
+      <h2>One QR engine. Built for however you sell.</h2>
+      <p>Pick the use case closest to your business — every solution comes with the same live-editing, trackable QR core.</p>
+    </div>
+    <div class="sol-grid">
+
+      <div class="sol-card">
+        <span class="sol-tag">Hospitality</span>
+        <h3>QR Menus</h3>
+        <p>Contactless restaurant & café menus. Update prices and items instantly — no reprinting table cards.</p>
+        <a class="btn btn-primary" href="https://wa.me/918248176509?text=Hi%2C%20I%27m%20interested%20in%20a%20QR%20Menu%20for%20my%20restaurant" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="sol-card">
+        <span class="sol-tag">Networking</span>
+        <h3>Digital Business Cards</h3>
+        <p>One tap shares your contact, socials, and portfolio. Update your details forever from one dashboard.</p>
+        <a class="btn btn-primary" href="https://wa.me/918248176509?text=Hi%2C%20I%27m%20interested%20in%20a%20Digital%20Business%20Card" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="sol-card">
+        <span class="sol-tag">Retail</span>
+        <h3>Payment QR Codes</h3>
+        <p>Branded payment codes for your counter or storefront, with scan tracking so you know peak hours.</p>
+        <a class="btn btn-primary" href="https://wa.me/918248176509?text=Hi%2C%20I%27m%20interested%20in%20a%20Payment%20QR%20Code" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="sol-card">
+        <span class="sol-tag">Packaging</span>
+        <h3>Product & Packaging QR</h3>
+        <p>Link product packaging to videos, manuals, or warranty registration — swap the content anytime.</p>
+        <a class="btn btn-primary" href="https://wa.me/918248176509?text=Hi%2C%20I%27m%20interested%20in%20Packaging%20QR%20Codes" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="sol-card">
+        <span class="sol-tag">Real Estate</span>
+        <h3>Property Listing QR</h3>
+        <p>Place on yard signs or brochures — link to listings, virtual tours, or a lead capture form.</p>
+        <a class="btn btn-primary" href="https://wa.me/918248176509?text=Hi%2C%20I%27m%20interested%20in%20a%20Property%20Listing%20QR" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="sol-card">
+        <span class="sol-tag">Events</span>
+        <h3>Event Check-in QR</h3>
+        <p>Fast guest check-in, feedback collection, or ticket validation — track attendance live.</p>
+        <a class="btn btn-primary" href="https://wa.me/918248176509?text=Hi%2C%20I%27m%20interested%20in%20an%20Event%20QR%20Code" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="sol-card">
+        <span class="sol-tag">Marketing</span>
+        <h3>Campaign Tracking QR</h3>
+        <p>Put a different code on each flyer, ad, or city to see which one actually drives traffic.</p>
+        <a class="btn btn-primary" href="https://wa.me/918248176509?text=Hi%2C%20I%27m%20interested%20in%20Campaign%20Tracking%20QR%20Codes" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+      <div class="sol-card">
+        <span class="sol-tag">Reviews</span>
+        <h3>Google Review QR</h3>
+        <p>One scan takes happy customers straight to your review page — boost ratings with zero friction.</p>
+        <a class="btn btn-primary" href="https://wa.me/918248176509?text=Hi%2C%20I%27m%20interested%20in%20a%20Google%20Review%20QR%20Code" target="_blank" rel="noopener">Order on WhatsApp</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head" style="margin-left:auto;margin-right:auto;text-align:center;">
+      <span class="eyebrow" style="justify-content:center;">Pricing</span>
+      <h2>Simple plans. No hidden setup fees.</h2>
+      <p style="margin:0 auto;">Every plan includes dynamic editing and scan analytics. Upgrade or cancel anytime — just message us on WhatsApp.</p>
+    </div>
+
+    <div class="price-grid">
+
+      <div class="price-card">
+        <h3>Starter</h3>
+        <p class="desc">For individuals trying QR codes for the first time.</p>
+        <div class="price-amt"><span class="num">₹499</span><span class="per">/ 6 months</span></div>
+        <p class="price-note">Billed once · 1 QR code included</p>
+        <ul class="price-feats">
+          <li>✅ 1 dynamic QR code</li>
+          <li>✅ Unlimited edits</li>
+          <li>✅ Basic scan count</li>
+          <li>✅ Standard black & white design</li>
+          <li>✅ Email support</li>
+        </ul>
+        <a class="btn btn-dark btn-block" href="https://wa.me/918248176509?text=Hi%2C%20I%27d%20like%20to%20buy%20the%20Starter%20Plan%20(%E2%82%B9499)" target="_blank" rel="noopener">Buy on WhatsApp</a>
+      </div>
+
+      <div class="price-card popular">
+        <span class="popular-badge">Most Popular</span>
+        <h3>Business</h3>
+        <p class="desc">For restaurants, shops & growing brands.</p>
+        <div class="price-amt"><span class="num">₹1,499</span><span class="per">/ year</span></div>
+        <p class="price-note">Billed yearly · Up to 5 QR codes</p>
+        <ul class="price-feats">
+          <li>✅ Up to 5 dynamic QR codes</li>
+          <li>✅ Unlimited edits</li>
+          <li>✅ Full analytics (location, device, time)</li>
+          <li>✅ Custom logo & brand colors</li>
+          <li>✅ Priority WhatsApp support</li>
+        </ul>
+        <a class="btn btn-primary btn-block" href="https://wa.me/918248176509?text=Hi%2C%20I%27d%20like%20to%20buy%20the%20Business%20Plan%20(%E2%82%B91%2C499)" target="_blank" rel="noopener">Buy on WhatsApp</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Lifetime</h3>
+        <p class="desc">Pay once. Use forever. Best for one key code.</p>
+        <div class="price-amt"><span class="num">₹2,999</span><span class="per">one-time</span></div>
+        <p class="price-note">No renewal · 1 QR code, never expires</p>
+        <ul class="price-feats">
+          <li>✅ 1 lifetime dynamic QR code</li>
+          <li>✅ Unlimited edits, forever</li>
+          <li>✅ Full analytics dashboard</li>
+          <li>✅ Custom logo & brand colors</li>
+          <li>✅ Priority WhatsApp support</li>
+        </ul>
+        <a class="btn btn-dark btn-block" href="https://wa.me/918248176509?text=Hi%2C%20I%27d%20like%20to%20buy%20the%20Lifetime%20Plan%20(%E2%82%B92%2C999)" target="_blank" rel="noopener">Buy on WhatsApp</a>
+      </div>
+
+    </div>
+    <p style="text-align:center;margin-top:28px;color:#8A93A6;font-size:0.9rem;">Need more than 5 codes or a custom enterprise rollout? <a href="https://wa.me/918248176509?text=Hi%2C%20I%20need%20a%20custom%20QR%20plan%20for%20multiple%20locations" target="_blank" rel="noopener" style="color:var(--teal);font-weight:600;">Ask about bulk pricing →</a></p>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section id="testimonials" style="background:var(--paper-2);">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Testimonials</span>
+      <h2>Trusted by businesses who scan first, ask questions never.</h2>
+    </div>
+    <div class="test-grid">
+
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"We changed our menu three times in one month for a festival and never reprinted a single table card. Customers just scan and see the latest version."</p>
+        <div class="test-author">
+          <div class="avatar">R</div>
+          <div><b>Ramesh Iyer</b><span>Owner, Spice Junction Café</span></div>
+        </div>
+      </div>
+
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"The scan analytics actually told me which flyer location was working and which wasn't. Moved my ad budget accordingly and saved a lot of wasted printing."</p>
+        <div class="test-author">
+          <div class="avatar">P</div>
+          <div><b>Priya Natarajan</b><span>Marketing Lead, Urban Threads</span></div>
+        </div>
+      </div>
+
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Ordered our digital business cards over WhatsApp and had them ready the same evening. Whole team is using them at client meetings now."</p>
+        <div class="test-author">
+          <div class="avatar">S</div>
+          <div><b>Suresh Kumar</b><span>Founder, BuildRight Realty</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions, answered.</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+
+      <div class="faq-item">
+        <button class="faq-q"><span>What is a dynamic QR code and how is it different from a normal one?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>A normal QR code is printed once and points to one fixed link forever. A dynamic QR code from MyDigitalQR lets you change where it points — anytime, without reprinting — and shows you real-time scan analytics.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q"><span>Do I need to print a new code every time I update my menu or offer?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>No. That's the core benefit of dynamic QR codes. You update the destination link from your dashboard and the same printed code instantly reflects the change.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q"><span>Can I track how many people scan my QR code?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>Yes. Every paid plan includes a scan analytics dashboard showing total scans, scan location, device type, and time of day.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q"><span>Will the QR code expire or stop working?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>As long as your plan is active, your QR codes keep working. We also offer a Lifetime plan for codes that never need renewal.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q"><span>Can I customize the design with my logo and brand colors?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>Yes — all plans except a free trial include custom colors, logo embedding, and frame styles to match your brand.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q"><span>How do I order or get support — is there WhatsApp help?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>Yes. Tap any "Order on WhatsApp" button on this site to chat with our team directly at +91 82481 76509, or email svssocials.info@gmail.com.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" style="background:var(--paper-2);">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Contact</span>
+      <h2>Tell us what you need. We'll set it up.</h2>
+      <p>Fastest way to order is WhatsApp — most QR codes are delivered the same day.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info-card">
+        <div class="contact-row">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5FE0D6" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.82.5 3.53 1.36 5L2 22l5.2-1.36C8.65 21.5 10.3 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg></div>
+          <div>
+            <b>WhatsApp</b>
+            <span><a href="https://wa.me/918248176509" target="_blank" rel="noopener" style="color:var(--teal-light);">+91 82481 76509</a></span>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5FE0D6" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg></div>
+          <div>
+            <b>Email</b>
+            <span><a href="mailto:svssocials.info@gmail.com" style="color:var(--teal-light);">svssocials.info@gmail.com</a></span>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5FE0D6" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div>
+            <b>Response Time</b>
+            <span>Usually within a few hours, 7 days a week</span>
+          </div>
+        </div>
+        <div style="margin-top:24px;">
+          <a class="btn btn-primary btn-block" href="https://wa.me/918248176509?text=Hi%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20a%20QR%20code%20product" target="_blank" rel="noopener">Chat With Us Now</a>
+        </div>
+      </div>
+
+      <form class="form-card" id="contactForm">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-row2">
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="98765 43210" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com">
+          </div>
+        </div>
+        <div class="field">
+          <label for="product">What do you need?</label>
+          <select id="product" name="product">
+            <option>QR Menu</option>
+            <option>Digital Business Card</option>
+            <option>Payment QR Code</option>
+            <option>Packaging QR</option>
+            <option>Property Listing QR</option>
+            <option>Event Check-in QR</option>
+            <option>Bulk / Enterprise</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us a bit about your business and what you'd like the QR code to do..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send via WhatsApp</button>
+        <p style="font-size:0.8rem;color:#8A93A6;margin-top:12px;text-align:center;">Submitting opens WhatsApp with your details pre-filled — nothing is stored on this site.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta">
+  <div class="wrap">
+    <span class="eyebrow" style="justify-content:center;">Ready When You Are</span>
+    <h2>Your first QR code can be live today.</h2>
+    <p>No design skills needed. Send us your link, logo, and a few details — we'll handle the rest.</p>
+    <div class="hero-cta-row">
+      <a class="btn btn-amber" href="https://wa.me/918248176509?text=Hi%2C%20I%27d%20like%20to%20get%20my%20first%20QR%20code%20made" target="_blank" rel="noopener">Order on WhatsApp</a>
+      <a class="btn btn-ghost" href="mailto:svssocials.info@gmail.com?subject=QR%20Code%20Enquiry">Email Us Instead</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="margin-bottom:12px;">
+          <svg class="logo-mark" viewBox="0 0 30 30" fill="none">
+            <rect width="30" height="30" rx="6" fill="#0EA5A8"/>
+            <rect x="6" y="6" width="6" height="6" fill="#06201F"/>
+            <rect x="18" y="6" width="6" height="6" fill="#06201F"/>
+            <rect x="6" y="18" width="6" height="6" fill="#06201F"/>
+            <rect x="18" y="18" width="3" height="3" fill="#06201F"/>
+          </svg>
+          MyDigitalQR
+        </div>
+        <p style="font-size:0.88rem;max-width:260px;">Dynamic, trackable QR codes for menus, cards, payments & packaging — built for businesses in India.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="#solutions">QR Menus</a></li>
+          <li><a href="#solutions">Business Cards</a></li>
+          <li><a href="#solutions">Payment QR</a></li>
+          <li><a href="#solutions">Packaging QR</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/918248176509" target="_blank" rel="noopener">+91 82481 76509</a></li>
+          <li><a href="mailto:svssocials.info@gmail.com">svssocials.info@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 MyDigitalQR. All rights reserved.</span>
+      <span>Made for businesses that move fast.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= WhatsApp floating button ================= -->
+<a class="wa-float" href="https://wa.me/918248176509?text=Hi%2C%20I%20have%20a%20question%20about%20MyDigitalQR" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.82.5 3.53 1.36 5L2 22l5.2-1.36C8.65 21.5 10.3 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.5 0-2.93-.4-4.17-1.16l-.3-.18-3.1.81.83-3.02-.2-.31A7.92 7.92 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.42-5.94c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1-.37-1.9-1.18-.7-.62-1.18-1.39-1.32-1.63-.14-.24-.01-.37.11-.49.12-.12.27-.31.4-.46.13-.16.18-.27.27-.45.09-.18.05-.33-.02-.45-.07-.12-.6-1.45-.82-1.98-.22-.53-.45-.46-.62-.47-.16-.01-.35-.01-.54-.01-.18 0-.48.07-.74.34-.26.27-.99 1-.99 2.42 0 1.43 1.04 2.81 1.18 3 .14.19 1.96 2.99 4.74 4.07 2.78 1.08 2.78.72 3.28.68.5-.04 1.62-.66 1.85-1.3.23-.64.23-1.19.16-1.3-.07-.12-.24-.18-.5-.3z"/></svg>
+</a>
+
+<script>
+// Mobile menu toggle
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburgerBtn.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburgerBtn.setAttribute('aria-expanded', isOpen);
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+  hamburgerBtn.setAttribute('aria-expanded', 'false');
+}));
+
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+  const q = item.querySelector('.faq-q');
+  const a = item.querySelector('.faq-a');
+  q.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      a.style.maxHeight = a.scrollHeight + 'px';
+    }
+  });
+});
+
+// Hero QR grid generator (decorative, randomized module pattern)
+const qrGrid = document.getElementById('qrGrid');
+const pattern = [
+  1,1,1,0,0,0,1,1,1,
+  1,0,1,0,1,0,1,0,1,
+  1,1,1,0,0,0,1,1,1,
+  0,0,0,1,1,1,0,0,0,
+  0,1,0,1,0,1,0,1,0,
+  0,0,0,1,1,1,0,0,0,
+  1,1,1,0,0,0,1,1,1,
+  1,0,1,0,1,0,1,0,1,
+  1,1,1,0,0,0,1,1,1
+];
+pattern.forEach((on, i) => {
+  const cell = document.createElement('div');
+  cell.className = 'qr-cell' + (on ? '' : ' off');
+  cell.style.animationDelay = (i * 12) + 'ms';
+  qrGrid.appendChild(cell);
+});
+
+// Contact form -> WhatsApp handoff
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const product = document.getElementById('product').value;
+  const message = document.getElementById('message').value.trim();
+
+  let text = `Hi, I'm ${name}.\nPhone: ${phone}`;
+  if (email) text += `\nEmail: ${email}`;
+  text += `\nInterested in: ${product}`;
+  if (message) text += `\nMessage: ${message}`;
+
+  const url = `https://wa.me/918248176509?text=${encodeURIComponent(text)}`;
+  window.open(url, '_blank');
+});
+</script>
+
+</body>
+</html>
